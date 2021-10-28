@@ -54,7 +54,7 @@ You can use the script like this:
         Get-NetRoute -AddressFamily $AddressType -PolicyStore ActiveStore | `
             Select-Object -Property `
         @{label = "DestinationPrefix" ; expression = { $PSItem.DestinationPrefix } }, 
-        @{label = "NextHop" ; expression = { if ($PSItem.NextHop -ne '0.0.0.0') { $_.NextHop } } }, 
+        @{label = "DefaultGateway" ; expression = { if ($PSItem.NextHop -ne '0.0.0.0') { $_.NextHop } } }, 
         @{label = 'NextHopLocalIP'; Expression = { if ($PSItem.NextHop -eq '0.0.0.0') { ($PSItem | Get-NetIPAddress -AddressFamily $AddressType | Where-Object ifIndex -EQ $PSItem.IfIndex).IPAddress } } }, 
         @{label = "RouteMetric" ; expression = { $PSItem.RouteMetric } },    
         @{label = "InterfaceMetric" ; expression = { $PSItem.InterfaceMetric } },
@@ -63,4 +63,5 @@ You can use the script like this:
     }
     end {}
 }
-
+cls
+Get-ActiveRoutesPerAdapter -AddressType IPv4 | ft -AutoSize
