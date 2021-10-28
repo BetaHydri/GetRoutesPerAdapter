@@ -63,5 +63,8 @@ You can use the script like this:
     }
     end {}
 }
-cls
-Get-ActiveRoutesPerAdapter -AddressType IPv4 | ft -AutoSize
+
+
+# Main
+<# Clear-Host
+Get-ActiveRoutesPerAdapter -AddressType IPv4 | Format-Table -AutoSize #>
