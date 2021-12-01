@@ -1,4 +1,45 @@
 
+<#PSScriptInfo
+
+.VERSION 1.0.0
+
+.GUID 1bbfeb41-07ae-41fb-a41a-e3f7e4752ac9
+
+.AUTHOR Jan Tiedemann
+
+.COMPANYNAME Jan Tiedemann
+
+.COPYRIGHT 2021
+
+.TAGS Network Routes Nic Adapter
+
+.LICENSEURI
+
+.PROJECTURI
+
+.ICONURI
+
+.EXTERNALMODULEDEPENDENCIES 
+
+.REQUIREDSCRIPTS
+
+.EXTERNALSCRIPTDEPENDENCIES
+
+.RELEASENOTES
+
+
+.PRIVATEDATA
+
+#>
+
+<# 
+
+.DESCRIPTION 
+ Shows all network routes per network adapter (NIC) 
+
+#> 
+
+
 Function Get-ActiveRoutesPerAdapter {
 
     <#PSScriptInfo
