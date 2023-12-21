@@ -18,7 +18,7 @@ __You can use the script like this:__
 | 0.0.0.0/0| 10.229.128.1  | | 0 | 35 | Wi-Fi | 12 |
 
 ## Code:
-```
+```powershell
 Function Get-ActiveRoutesPerAdapter {
     [CmdletBinding()]
     Param (
